@@ -1,0 +1,163 @@
+@import "../../app.scss";
+
+.navbar {
+  width: 100%;
+  font-size: 17px;
+  position: sticky;
+  top: 0;
+  z-index: 998;
+  height: 120px;
+
+  &.scrolled {
+    background-color: white;
+    transition: 0.8s;
+  }
+
+  .container {
+    padding: 0px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      align-items: center;
+      width: 60%;
+
+      img {
+      }
+      .searchContainer {
+        display: flex;
+        align-items: center;
+        margin: 0 15px;
+        padding: 15px;
+        width: 100%;
+
+        input {
+          width: 100%;
+          height: 40px;
+          border-radius: 5px;
+          padding-left: 10px;
+          font-size: 16px;
+          border: 0.5px solid lightgray;
+          border-radius: 2px;
+          color: gray;
+        }
+        .searchIcon {
+          color: gray;
+          font-size: 18;
+          margin-left: 3px;
+          background-color: black;
+          padding: 11px;
+          cursor: pointer;
+        }
+      }
+      .language {
+        cursor: pointer;
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      margin: 20px 40px 20px 20px;
+      padding: 5px;
+
+      .userControl {
+        a {
+          margin-right: 20px;
+          cursor: pointer;
+          text-decoration: none;
+
+          color: black;
+        }
+      }
+
+      .cartIconContainer {
+        display: flex;
+        position: relative;
+        cursor: pointer;
+        margin-right: 30px;
+        color: #555;
+
+        .topIconBadge {
+          width: 16px;
+          height: 16px;
+          position: absolute;
+          top: -10px;
+          right: -5px;
+          background-color: red;
+          color: white;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 10px;
+        }
+      }
+
+      .profile {
+        .settings {
+          display: flex;
+          align-items: center;
+          img {
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            object-fit: cover;
+            cursor: pointer;
+          }
+
+          button {
+            padding: 20px 20px 20px 5px;
+            border: none;
+            background-color: transparent;
+          }
+        }
+        .icon {
+        }
+        .options {
+          display: none;
+          border-radius: 5px;
+        }
+
+        .iconSpan {
+          width: 30px;
+          height: 25px;
+          border-radius: 5px;
+          object-fit: cover;
+          cursor: pointer;
+          color: gray;
+          margin-right: 10px;
+        }
+
+        span {
+          display: flex;
+          align-items: center;
+          padding: 10px;
+          cursor: pointer;
+          width: 180px;
+          font-size: 13px;
+          font-weight: 500;
+          outline: lightgray solid 1px;
+          background-color: white;
+
+          &:hover {
+            box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.42);
+          }
+        }
+
+        &:hover {
+          .options {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            right: 100px;
+            top: 85px;
+            box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.42);
+          }
+        }
+      }
+    }
+  }
+}

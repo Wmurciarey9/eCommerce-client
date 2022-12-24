@@ -1,0 +1,135 @@
+.slider {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  .arrow {
+    width: 50px;
+    height: 50px;
+    background-color: #fff7f7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+    opacity: 0.5;
+    z-index: 2;
+  }
+  .arrowLeft {
+    left: 0;
+    margin-left: 10px;
+  }
+
+  .arrowRight {
+    right: 0;
+    margin-right: 10px;
+  }
+  .content {
+    height: 100%;
+    display: flex;
+    transition: all 1.5s ease;
+    .slide {
+      width: 100vw;
+      height: 500px;
+      display: flex;
+      align-items: center;
+
+      .imgContainer {
+        height: 150%;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 400px;
+          height: 300px;
+          object-fit: cover;
+        }
+      }
+      .infoContainer {
+        flex: 1;
+        padding: 50px;
+        z-index: 2;
+        .title {
+          font-size: 70px;
+        }
+        .description {
+          margin: 50px 0px;
+          font-size: 20px;
+          font-weight: 500;
+          letter-spacing: 3px;
+        }
+        button {
+          padding: 10px;
+          font-size: 20px;
+          background-color: transparent;
+          cursor: pointer;
+
+          &:hover {
+            color: white;
+            background-color: black;
+          }
+        }
+      }
+    }
+  }
+}
+
+//? This is the previous way (same as previous eCommerce store)
+
+// //!
+
+// .content {
+//     height: 100%;
+//     display: flex;
+//     transition: all 1.5s ease;
+//     .slide {
+//       width: 100vw;
+//       height: 500px;
+//       display: flex;
+//       align-items: center;
+
+//       .imgContainer {
+//         width: 100%;
+//         height: 100%;
+
+//         img {
+//           opacity: 50%;
+//           width: 100%;
+//           height: 100%;
+//           object-fit: cover;
+//         }
+//       }
+//       .infoContainer {
+//         position: absolute;
+//         margin-left: 100px;
+//         padding: 50px;
+//         .title {
+//           font-size: 70px;
+//         }
+//         .description {
+//           margin: 50px 0px;
+//           font-size: 20px;
+//           font-weight: 500;
+//           letter-spacing: 3px;
+//         }
+//         button {
+//           padding: 10px;
+//           font-size: 20px;
+//           background-color: transparent;
+//           cursor: pointer;
+
+//           &:hover {
+//             color: white;
+//             background-color: black;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
