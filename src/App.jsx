@@ -6,7 +6,7 @@ import { Login } from "./pages/login/Login";
 import { Register } from "./pages/register/Register";
 
 const App = () => {
-  const user = useSelector((state) => state.user.currentUser);
+  const user = true;
   return (
     <Router>
       <Routes>
