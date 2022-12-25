@@ -3,6 +3,7 @@ import React, { useContext, useState } from "react";
 import clemnLogo from "../images/clemn-logo.png";
 import { Search, ShoppingCartOutlined } from "@mui/icons-material";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import { useSelector } from "react-redux";
 
 import Person2OutlinedIcon from "@mui/icons-material/Person2Outlined";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
@@ -22,6 +23,8 @@ export const Navbar = () => {
     setIsScrolled(window.pageYOffset === 0 ? false : true);
     return () => (window.onscroll = null);
   };
+
+  const quantity = useSelector((state) => state.cart.quantity);
 
   return (
     <div className={isScrolled ? "navbar scrolled" : "navbar"}>
@@ -56,7 +59,7 @@ export const Navbar = () => {
               <Tippy content="Cart">
                 <ShoppingCartOutlined />
               </Tippy>
-              <span className="topIconBadge">2</span>
+              <span className="topIconBadge">{quantity}</span>
             </div>
           </div>
           <div className="profile navMain">
